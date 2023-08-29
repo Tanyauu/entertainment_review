@@ -12,8 +12,4 @@ const sequelize = new Sequelize(
   }
 );
 
-<<<<<<< HEAD
 module.exports = sequelize;
-=======
-module.exports = sequelize;
->>>>>>> 17cdba55ca90c0bcb4842f98a93cc72942610f60
