@@ -18,6 +18,10 @@ Game.init(
     info: {
       type: DataTypes.STRING(2500),
       allowNull: false,
+    },
+    year: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
 
     }
   },
