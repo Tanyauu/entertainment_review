@@ -8,32 +8,35 @@ Review.init(
   {
     // define columns
     id: {
-      type:DataTypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true
+      autoIncrement: true,
     },
     Review: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
-    movie_id:{
-        type:DataTypes.INTEGER,
-        references: {
+    movie_id: {
+      type: DataTypes.INTEGER,
+      references: {
         model: 'movie',
         key: 'id',
       },
-      game_id:{
-        type:DataTypes.INTEGER,
-        references: {
+    },
+    game_id: {
+      type: DataTypes.INTEGER,
+      references: {
         model: 'game',
         key: 'id',
       },
-      tv_id:{
-        type:DataTypes.INTEGER,
-        references: {
+    },
+    tv_id: {
+      type: DataTypes.INTEGER,
+      references: {
         model: 'tv',
         key: 'id',
-      }
+      },
+    },
   },
 
   {
