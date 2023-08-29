@@ -21,6 +21,7 @@ router.get('/:id', async (req, res) => {
     const movieData = await Movie.findByPk(req.params.id, {
       include: [{ model: Review }],
     });
+
     res.status(200).json(movieData);
     // res.status(200).json({ message: 'success' });
   } catch (err) {
