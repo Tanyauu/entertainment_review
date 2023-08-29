@@ -1,14 +1,14 @@
 const router = require('express').Router();
-const { Game, Review } = require('../../models');
+const { TV, Review } = require('../../models');
 
-// the `/api/games` endpoint
+// the `/api/tvs` endpoint
 
 router.get('/', async (req, res) => {
   try {
-    const gameData = await Game.findAll({
+    const tvData = await TV.findAll({
       include: [{ model: Review }],
     });
-    res.status(200).json(gameData);
+    res.status(200).json(tvData);
     // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
@@ -18,10 +18,10 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const gameData = await Game.findByPk(req.params.id, {
+    const tvData = await TV.findByPk(req.params.id, {
       include: [{ model: Review }],
     });
-    res.status(200).json(gameData);
+    res.status(200).json(tvData);
     // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
@@ -31,9 +31,9 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const gameData = await Game.create(req.body);
-    //res.status(200).json(gameData);
-    res.status(200).json({ message: 'success' });
+    const tvData = await TV.create(req.body);
+    res.status(200).json(tvData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -42,13 +42,13 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const gameData = await Game.update(req.body, {
+    const tvData = await TV.update(req.body, {
       where: {
         id: req.params.id,
       },
     });
-    //res.status(200).json(gameData);
-    res.status(200).json({ message: 'success' });
+    res.status(200).json(tvData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -57,13 +57,13 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const gameData = await Game.destroy({
+    const tvData = await TV.destroy({
       where: {
         id: req.params.id,
       },
     });
-    //res.status(200).json(gameData);
-    res.status(200).json({ message: 'success' });
+    res.status(200).json(tvData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
