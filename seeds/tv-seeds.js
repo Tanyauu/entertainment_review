@@ -1,24 +1,24 @@
 const { TV } = require('../models');
 
-const movieData = [
+const tvData = [
     {
-        movie_name: '',
+        tv_name: '',
         info: '',
     },
     {
-        movie_name: '',
+        tv_name: '',
         info: '',
     },
     {
-        movie_name: '',
+        tv_name: '',
         info: '',
     },
     {
-        movie_name: '',
+        tv_name: '',
         info: '',
     },
     {
-        movie_name: '',
+        tv_name: '',
         info: '',
     },
 ];
