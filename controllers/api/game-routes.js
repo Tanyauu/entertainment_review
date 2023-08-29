@@ -8,8 +8,8 @@ router.get('/', async (req, res) => {
     const gameData = await Game.findAll({
       include: [{ model: Review }],
     });
-    //res.status(200).json(gameData);
-    res.status(200).json({ message: 'success' });
+    res.status(200).json(gameData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -21,8 +21,8 @@ router.get('/:id', async (req, res) => {
     const gameData = await Game.findByPk(req.params.id, {
       include: [{ model: Review }],
     });
-    //res.status(200).json(gameData);
-    res.status(200).json({ message: 'success' });
+    res.status(200).json(gameData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
