@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 require('dotenv').config();
 
 const Sequelize = require('sequelize');
@@ -12,7 +12,7 @@ const sequelize = process.env.JAWSDB_URL
         decimalNumbers: true,
       },
     });
-=======
+
 const Sequelize = require('sequelize');
 require('dotenv').config();
 
@@ -26,6 +26,6 @@ const sequelize = new Sequelize(
     port: 3306,
   }
 );
->>>>>>> 678c3438cfe1d3f4f24e8a91c3ee5b3226466dd0
+
 
 module.exports = sequelize;
