@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> main
 require('dotenv').config();
 
 const Sequelize = require('sequelize');
@@ -12,6 +16,21 @@ const sequelize = process.env.JAWSDB_URL
         decimalNumbers: true,
       },
     });
+=======
+const Sequelize = require('sequelize');
+require('dotenv').config();
+
+const sequelize = new Sequelize(
+  process.env.DB_NAME,
+  process.env.DB_USER,
+  process.env.DB_PASSWORD,
+  {
+    host: 'localhost',
+    dialect: 'mysql',
+    port: 3306,
+  }
+);
+>>>>>>> 5b6194be0859045c5a6b23e7a83279173959f67a
 
 const Sequelize = require('sequelize');
 require('dotenv').config();
