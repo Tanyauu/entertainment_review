@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+-- DROP DATABASE
+DROP DATABASE IF EXISTS entertainment_db;
+
+-- CREATE DATABASE
+CREATE DATABASE entertainment_db;
+=======
 DROP DATABASE IF EXISTS techblog_db;
 
 CREATE DATABASE techblog_db;
+>>>>>>> 5b6194be0859045c5a6b23e7a83279173959f67a
