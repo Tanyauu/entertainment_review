@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col-auto">
+    <h2>Welcome, {{name}}!</h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  {{#if posts.length}}
+  <div class="col-md-6 post-list">
+    <h3>Your Posts:</h3>
+
+    {{#each posts as |post|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/post/{{post.id}}">{{post.name}}</a></h4>
+      </div>
+      <form class="form edit-post-form">
+        <div class="form-group">
+          <label for="post-desc">description:</label>
+          <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">UPDATE</button>
+        </div>
+      </form>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+
+  <div class="col-md-6">
+    <h3>Create a New Post:</h3>
+
+    <form class="form new-post-form">
+      <div class="form-group">
+        <label for="post-name">post name:</label>
+        <input class="form-input" type="text" id="post-name" name="post-name" />
+      </div>
+      <div class="form-group">
+        <label for="post-desc">description:</label>
+        <textarea class="form-input" id="post-desc" name="post-desc"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-primary">CREATE</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="./js/dashboard.js"></script>
+
+
+
+<div class="grid grid-cols-8 grid-rows-8 gap-4">
+    <div class="col-span-8 row-span-2">
+      <div class="col-auto">
+        <h2>Welcome, {{name}}!</h2>
+      </div>      
+    </div>
+    <div class="col-span-8 row-span-6 row-start-3">
+      {{#if reviews.length}}
+      <div class="col-md-6 review-list">
+        <h3>Your Reviews:</h3>
+
+        {{#each reviews as |review|}}
+        <div class="row mb-2">
+          <div class="col-md-8">
+            <h4><a href="/item/{{review.item_id}}">{{item.name}}</a></h4>
+          </div>
+          <p>{{review.description}}</p>
+          <form class="edit-review-form">
+            <div class="mb-6">
+              <label for="review" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Review</label>
+              <input type="review" id="review" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="write some reviews" required>
+            </div>
+            <div>
+              <label for="rating" class="sr-only">Rating (between 1 and 5):</label>
+              <input type="number" id="review-rating" name="rating" min="1" max="5">
+            </div>
+            <button type="submit" class="flow-right text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" data-id="{{review.id}}">UPDATE</button>
+          </form>
+          <div class="col-md-4">           
+            <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" data-id="{{review.id}}">DELETE</button>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+      {{/if}}
+    </div>
+</div>
+    
