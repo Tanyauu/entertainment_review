@@ -1,37 +1,17 @@
-const newFormHandler = async (event) => {
-  event.preventDefault();
-
-  const name = document.querySelector('#post-name').value.trim();
-  const description = document.querySelector('#post-desc').value.trim();
-
-  if (name && description) {
-    const response = await fetch(`/api/posts`, {
-      method: 'POST',
-      body: JSON.stringify({ name, description }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
-
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert('Failed to create post');
-    }
-  }
-};
 
 const editFormHandler = async (event) => {
   event.preventDefault();
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const description = document.querySelector('#post-desc').value.trim();
+    const description = document.querySelector('#review-desc').value.trim();
+
+    const rating = document.querySelector('#review-desc').value;
 
     if (description) {
-      const response = await fetch(`/api/posts/${id}`, {
+      const response = await fetch(`/api/reviews/${id}`, {
         method: 'PUT',
-        body: JSON.stringify({ description }),
+        body: JSON.stringify({ description, rating }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -40,7 +20,7 @@ const editFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/dashboard');
       } else {
-        alert('Failed to create post');
+        alert('Failed to update review');
       }
     } 
   }
@@ -50,26 +30,23 @@ const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const response = await fetch(`/api/posts/${id}`, {
+    const response = await fetch(`/api/reviews/${id}`, {
       method: 'DELETE',
     });
 
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert('Failed to delete post');
+      alert('Failed to delete review');
     }
   }
 };
 
-document
-  .querySelector('.new-post-form')
-  .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.edit-post-form')
-  .addEventListener('submit', newFormHandler);
+  .querySelector('.edit-review-form')
+  .addEventListener('submit', editFormHandler);
 
 document
-  .querySelector('.project-post')
+  .querySelector('.review-list')
   .addEventListener('click', delButtonHandler);

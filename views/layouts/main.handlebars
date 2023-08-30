@@ -4,33 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog</title>
-  <link rel="stylesheet" href="/css/jass.css">
-  <link rel="stylesheet" href="/css/style.css">
+  <title>Entertainment Review</title>
+  <link rel="stylesheet" href="../../public/css/final.css">
 </head>
 
 <body>
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span><a href="/">Tech Blog</a></span>
-      </h1>
-      <nav>
-        <a href="/dashboard">Dashboard</a> |
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+
+      <nav class="bg-white border-gray-200 dark:bg-gray-900">
+          <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl p-4">
+              <class="flex items-center">
+                  <img src="../../public/image.jpg" class="h-8 mr-3" alt="Entertainment Reviews Logo" />
+                  <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Entertainment Reviews</span>
+              </a>
+              <div class="flex items-center">
+                  <a href="/login" class="text-sm  text-blue-600 dark:text-blue-500 hover:underline">Login</a>
+              </div>
+          </div>
       </nav>
+
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
       {{{ body }}}
     </main>
     <footer>
-      <p>Thank you for visiting!</p>
     </footer>
   </div>
 
@@ -38,6 +37,7 @@
   {{#if logged_in}}
   <script src="/js/logout.js"></script>
   {{/if}}
+  <script src="../../node_modules/flowbite/dist/flowbite.min.js"></script>
 </body>
 
 </html>
