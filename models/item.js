@@ -14,9 +14,10 @@ Item.init(
     category:
     {
       type:DataTypes.STRING,
-      allowNull:false
+      allowNull:false,
 
     },
+
     name: {
       type: DataTypes.VARCHAR(255),
       allowNull: false,

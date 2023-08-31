@@ -3,7 +3,9 @@ const { Review } = require('../models');
 const reviewData = [
     {
         text: "Action Packed Thriller!",
-        tv_id: 1,
+        item_id: 1,
+        rating:5 ,
+        user_id:2,
 
     },
 
