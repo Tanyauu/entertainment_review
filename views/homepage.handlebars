@@ -5,11 +5,9 @@
           <!-- Carousel wrapper -->
           <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
               <!-- Item 1 -->
-          {{#each items as |item|}}
-          <div class="hidden duration-700 ease-in-out" data-carousel-item="active">
-            <img src={{item.url}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
+          <div id="carousel" class="hidden duration-700 ease-in-out">
+            {{!-- <img src={{item.url}} class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="..."> --}}
           </div>
-          {{/each}}
           </div>
           <!-- Slider controls -->
           <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
@@ -50,10 +48,10 @@
           </ul>
       </div>
       <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Top 10:</h2>
-      <ol class="max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400">
-        {{#each items as |item|}}
-        <a href="/item/{{id}}" class="font-semibold text-gray-900 dark:text-white">{{item.title}}</a>
-        {{/each}}
+      <ol id="rk-list" class="max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400">
+        {{!-- {{#each items as |item|}}
+        <a href="/item/{{id}}" class="font-semibold text-gray-900 dark:text-white">{{item.name}}</a>
+        {{/each}} --}}
       </ol>
     </div>
 
@@ -65,13 +63,12 @@
 
     <div class="col-span-2 row-span-5 col-start-7 row-start-4">
       <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Production Year:</h2>
-      <ol class="max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400">
+      <ol id="yr-list" class="max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400">
           <li>
-            {{#each years as |year|}}
-            <a href="/year/{{id}}" class="font-semibold text-gray-900 dark:text-white">{{year.name}}</a>
+            {{!-- {{#each years as |year|}}
+            <a href="/year/{{id}}" class="font-semibold text-gray-900 dark:text-white">{{year.name}}</a> --}}
           </li>
       </ol>
     </div>
 </div>
 
-<script src="./js/homepage.js"></script>
