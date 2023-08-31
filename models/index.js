@@ -1,33 +1,36 @@
-const User = require('./User');
-const Post = require('./Post');
-const Comment = require('./Comment');
+const Game = require('./games');
+const Movie = require('./movies');
+const TV = require('./tvshows');
+const Review = require('./review');
 
-
-User.hasMany(Post, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+//movie has many reviews
+Movie.hasMany(Review, {
+  foreignKey: 'movie_id',
 });
 
-User.hasMany(Comment, {
-  foreignKey: 'user_id',
-  onDelete: 'CASCADE'
+Game.hasMany(Review, {
+  foreignKey: 'game_id',
 });
 
-Post.hasMany(Comment, {
-  foreignKey: 'post_id',
-  onDelete: 'CASCADE'
+TV.hasMany(Review, {
+  foreignKey: 'tv_id',
 });
 
-Post.belongsTo(User, {
-  foreignKey: 'user_id'
+Review.belongsTo(Movie, {
+  foreignKey: 'movie_id',
 });
 
-Comment.belongsTo(User, {
-  foreignKey: 'user_id'
+Review.belongsTo(Game, {
+  foreignKey: 'game_id',
 });
 
-Comment.belongsTo(Post, {
-  foreignKey: 'post_id'
+Review.belongsTo(TV, {
+  foreignKey: 'tv_id',
 });
 
-module.exports = { User, Post, Comment };
+module.exports = {
+  Game,
+  Movie,
+  TV,
+  Review,
+};

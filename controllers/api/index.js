@@ -1,10 +1,15 @@
 const router = require('express').Router();
-const userRoutes = require('./userRoutes');
-const postRoutes = require('./postRoutes');
-const commentRoutes = require('./commentRoutes');
+const gameRoutes = require('./game-routes');
+const movieRoutes = require('./movie-routes');
+const tvRoutes = require('./tv-routes');
 
-router.use('/users', userRoutes);
-router.use('/projects', postRoutes);
-router.use('/comments', commentRoutes);
+// const tvRoutes = require('./tv-routes');
+// const reviewRoutes = require('./review-routes');
+// const userRoutes = require('./user-routes');
+
+router.use('/games', gameRoutes);
+router.use('/movies', movieRoutes);
+router.use('/tvs', tvRoutes);
+
 
 module.exports = router;
