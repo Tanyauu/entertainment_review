@@ -7,7 +7,7 @@ const gameData = [
     year: 2017,
   },
   {
-    game_name: 'NeverSong',
+    name: 'NeverSong',
     info: 'Help little Peet hack-and-slash his way through a beautifully haunting coma. A hand-drawn action-adventure through a dreamy world filled with fleshy monsters, insane grown-ups, and sad children looking for their mommies.',
     year: 2019,
 
