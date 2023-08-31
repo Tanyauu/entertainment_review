@@ -13,30 +13,24 @@ Review.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    Review: {
+    text: {
       type: DataTypes.STRING,
     },
-    movie_id: {
+
+    item_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'movie',
+        model: 'item',
         key: 'id',
       },
     },
-    game_id: {
+    user_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'game',
+        model: 'user',
         key: 'id',
       },
-    },
-    tv_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'tv',
-        key: 'id',
-      },
-    },
+    },    
   },
 
   {
