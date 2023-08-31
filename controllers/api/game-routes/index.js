@@ -1,15 +1,21 @@
 const router = require('express').Router();
-const { Movie, Review } = require('../../models');
+const { Item, Review } = require('../../../models');
 
-// the `/api/movies` endpoint
+// the `/api/games` endpoint
+
+// Define category variable
+const category = 'Game';
 
 router.get('/', async (req, res) => {
   try {
-    const movieData = await Movie.findAll({
+    const gameData = await Item.findAll({
+      where: {
+        category: category,
+      },
       include: [{ model: Review }],
     });
-    // res.status(200).json(movieData);
-    res.status(200).json({ message: 'success' });
+    res.status(200).json(gameData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -18,11 +24,13 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const movieData = await Movie.findByPk(req.params.id, {
+    const gameData = await Item.findByPk(req.params.id, {
+      where: {
+        category: category,
+      },
       include: [{ model: Review }],
     });
-
-    res.status(200).json(movieData);
+    res.status(200).json(gameData);
     // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
@@ -32,9 +40,9 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const movieData = await Movie.create(req.body);
-    // res.status(200).json(movieData);
-    res.status(200).json({ message: 'success' });
+    const gameData = await Game.create(req.body);
+    res.status(200).json(gameData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -43,13 +51,14 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const movieData = await Movie.update(req.body, {
+    const gameData = await Game.update(req.body, {
       where: {
+        category: category,
         id: req.params.id,
       },
     });
-    // res.status(200).json(movieData);
-    res.status(200).json({ message: 'success' });
+    res.status(200).json(gameData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -58,13 +67,14 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const movieData = await Movie.destroy({
+    const gameData = await Game.destroy({
       where: {
+        category: category,
         id: req.params.id,
       },
     });
-    // res.status(200).json(movieData);
-    res.status(200).json({ message: 'success' });
+    res.status(200).json(gameData);
+    // res.status(200).json({ message: 'success' });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
