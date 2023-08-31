@@ -19,7 +19,7 @@ Item.init(
     },
 
     name: {
-      type: DataTypes.VARCHAR(255),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     info: {
