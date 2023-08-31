@@ -15,6 +15,7 @@ Review.init(
     },
     text: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
 
     item_id: {
@@ -22,6 +23,13 @@ Review.init(
       references: {
         model: 'item',
         key: 'id',
+      },
+    },
+    rating:{
+      type: DataTypes.INTEGER,
+      validate:{
+        min: 1,
+        max: 5,        
       },
     },
     user_id: {
