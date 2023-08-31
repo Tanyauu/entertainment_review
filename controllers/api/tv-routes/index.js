@@ -1,11 +1,17 @@
 const router = require('express').Router();
-const { TV, Review } = require('../../models');
+const { Item, Review } = require('../../../models');
 
 // the `/api/tvs` endpoint
 
+// define category variable
+const category = 'TV';
+
 router.get('/', async (req, res) => {
   try {
-    const tvData = await TV.findAll({
+    const tvData = await Item.findAll({
+      where: {
+        category: category,
+      },
       include: [{ model: Review }],
     });
     res.status(200).json(tvData);
@@ -18,7 +24,10 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const tvData = await TV.findByPk(req.params.id, {
+    const tvData = await Item.findByPk(req.params.id, {
+      where: {
+        category: category,
+      },
       include: [{ model: Review }],
     });
     res.status(200).json(tvData);
@@ -31,7 +40,7 @@ router.get('/:id', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const tvData = await TV.create(req.body);
+    const tvData = await Item.create(req.body);
     res.status(200).json(tvData);
     // res.status(200).json({ message: 'success' });
   } catch (err) {
@@ -42,8 +51,9 @@ router.post('/', async (req, res) => {
 
 router.put('/:id', async (req, res) => {
   try {
-    const tvData = await TV.update(req.body, {
+    const tvData = await Item.update(req.body, {
       where: {
+        category: category,
         id: req.params.id,
       },
     });
@@ -57,8 +67,9 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const tvData = await TV.destroy({
+    const tvData = await Item.destroy({
       where: {
+        category: category,
         id: req.params.id,
       },
     });
