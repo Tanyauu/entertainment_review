@@ -9,14 +9,14 @@ const reviewFormHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const review_id = event.target.getAttribute('data-id');
 
-    const description = document.querySelector('#review-desc').value.trim();
+    const text = document.querySelector('#review-desc').value.trim();
 
     const rating = document.querySelector('#review-rating').value;
   
-    if (description) {
+    if (text) {
       const response = await fetch(`/api/reviews`, {
         method: 'POST',
-        body: JSON.stringify({ review_id, description, rating }),
+        body: JSON.stringify({ text, rating }),
         headers: {
           'Content-Type': 'application/json',
         },

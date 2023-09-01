@@ -4,14 +4,14 @@ const editFormHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
     const id = event.target.getAttribute('data-id');
 
-    const description = document.querySelector('#review-desc').value.trim();
+    const text = document.querySelector('#review-desc').value.trim();
 
     const rating = document.querySelector('#review-desc').value;
 
-    if (description) {
+    if (text) {
       const response = await fetch(`/api/reviews/${id}`, {
         method: 'PUT',
-        body: JSON.stringify({ description, rating }),
+        body: JSON.stringify({ text, rating }),
         headers: {
           'Content-Type': 'application/json',
         },

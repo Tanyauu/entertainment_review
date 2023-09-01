@@ -1,7 +1,6 @@
 let rkList = document.querySelector("#rk-list");
 let yrList = document.querySelector("#yr-list");
 let carousel = document.querySelector("#carousel");
-const timeInt = 700;
 
 const movieButtonHandler = async (event) => {
   try {
@@ -10,11 +9,11 @@ const movieButtonHandler = async (event) => {
     });
 
     const moviedata = await response.json();
-    let sortedMovies = moviedata.sort((i1,i2) => (i1.rating < i2.rating) ? 1 : (i1.rating < i2.rating) ? -1 : 0);
+    let sortedMovies = moviedata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.avgRating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedMovies.id}`);
-      rkList.innerText = sortedMovies.name;
+      rkList.innerText = sortedMovies[i].name;
       li.appendChild(rkList);
     }
   } catch (error) {
@@ -29,11 +28,11 @@ const tvButtonHandler = async (event) => {
     });
 
     const tvdata = await response.json();
-    let sortedTvs = tvdata.sort((i1,i2) => (i1.rating < i2.rating) ? 1 : (i1.rating < i2.rating) ? -1 : 0);
+    let sortedTvs = tvdata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.avgRating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedTvs.id}`);
-      rkList.innerText = sortedTvs.name;
+      rkList.innerText = sortedTvs[i].name;
       li.appendChild(rkList);
     }
   } catch (error) {
@@ -48,11 +47,11 @@ const gameButtonHandler = async (event) => {
     });
 
     const gamedata = await response.json();
-    let sortedGames = gamedata.sort((i1,i2) => (i1.rating < i2.rating) ? 1 : (i1.rating < i2.rating) ? -1 : 0);
+    let sortedGames = gamedata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.ravgRating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedGames.id}`);
-      rkList.innerText = sortedGames.name;
+      rkList.innerText = sortedGames[i].name;
       li.appendChild(rkList);
     }
   } catch (error) {
@@ -71,7 +70,7 @@ async function fetchYear() {
     for (i = 0; i < sortedYears.length; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/year/${sortedYears.year}`);
-      rkList.innerText = sortedYears.year;
+      rkList.innerText = sortedYears[i].year;
       li.appendChild(rkList);
     }
   } catch (error) {
