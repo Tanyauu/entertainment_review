@@ -1,6 +1,7 @@
 let rkList = document.querySelector("#rk-list");
 let yrList = document.querySelector("#yr-list");
 let carousel = document.querySelector("#carousel");
+const timeInt = 700;
 
 const movieButtonHandler = async (event) => {
   try {
@@ -78,28 +79,6 @@ async function fetchYear() {
   }
 }
 
-async function carouselRender() {
-  try {
-    const response = await fetch(`/`, {
-      method: 'GET',
-    });
-
-    const itemdata = await response.json();
-    while (true) {
-      carousel.setAttribute("data-carousel-item", "active");
-      img = document.createElement('img');
-      img.src = itemdata[0].url;
-      img.setAttribute("class", "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2");
-      img.setAttribute("alt", "...");
-      carousel.appendChild(img);
-      let last = itemdata.pop();
-      itemdata.upshift(last);
-      carousel.setAttribute("data-carousel-item", "");
-    }
-  } catch (error) {
-    alert(response.statusText);
-  }
-}
 
 document
   .querySelector('#button1')
@@ -114,4 +93,3 @@ document
   .addEventListener('click', gameButtonHandler);
 
 fetchYear();
-carouselRender();

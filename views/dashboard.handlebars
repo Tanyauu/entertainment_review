@@ -2,7 +2,7 @@
 <div class="grid grid-cols-8 grid-rows-8 gap-4">
     <div class="col-span-8 row-span-2">
       <div class="col-auto">
-        <h2>Welcome, {{name}}!</h2>
+        <h2>Welcome, {{user.name}}!</h2>
       </div>      
     </div>
     <div class="col-span-8 row-span-6 row-start-3">
@@ -15,7 +15,7 @@
           <div class="col-md-8">
             <h4><a href="/item/{{review.item_id}}">{{item.name}}</a></h4>
           </div>
-          <p>{{review.description}}</p>
+            <p>{{review.text}}</p>
           <form class="edit-review-form">
             <div class="mb-6">
               <label for="review" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Review</label>

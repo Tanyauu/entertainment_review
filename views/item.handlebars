@@ -12,6 +12,7 @@
       {{> review-details item.reviews}}
     </div>
     <div className="col-span-8 row-span-2 row-start-7">
+    {{#if logged_in}}
       <form class="review-form mb-6">
           <div class="py-2 px-4 mb-4 bg-white rounded-lg rounded-t-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700">
               <label for="review" class="sr-only">Your review</label>
@@ -23,13 +24,12 @@
               <label for="rating" class="sr-only">Rating (between 1 and 5):</label>
               <input type="number" id="review-rating" name="rating" min="1" max="5">
           </div>
-          {{#if logged_in}}
           <button type="submit"
               class="float-right inline-flex items-center py-2.5 px-4 text-xs font-medium text-center text-white bg-primary-700 rounded-lg focus:ring-4 focus:ring-primary-200 dark:focus:ring-primary-900 hover:bg-primary-800">
               Write review
           </button>     
-          {{/if}}
       </form>
+    {{/if}}
     </div>
 </div>
 
