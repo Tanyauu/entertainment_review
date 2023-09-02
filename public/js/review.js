@@ -31,9 +31,9 @@ const reviewFormHandler = async (event) => {
   }
 };
 
-async function carouselRender() {
+async function ratingRender() {
   try {
-    const response = await fetch(`/api/dashboard`, {
+    const response = await fetch(`/api/reviews`, {
       method: 'GET',
     });
 
@@ -86,4 +86,4 @@ document
   .querySelector('.review-form')
   .addEventListener('submit', reviewFormHandler);
 
-  renderStar();
+ratingRender();
