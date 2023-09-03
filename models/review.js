@@ -14,7 +14,7 @@ Review.init(
       autoIncrement: true,
     },
     text: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT('long'),
       allowNull: false,
     },
 
