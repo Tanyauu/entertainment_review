@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const sequelize = require('../../../config/connection');
 const { Item, User, Review } = require('../../../models');
 
 // The `/api/reviews` endpoint
@@ -24,7 +25,33 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
-    const reviewData = await Review.create(req.body);
+    const reviewData = await Review.create({
+      text: req.body.text,
+      rating: req.body.rating,
+      item_id: req.body.item_id,
+      user_id: req.session.user_id,
+    });
+
+    const newItem = await Item.findOne({
+      where: {
+        id: req.body.item_id,
+      },
+      include: [
+        {
+          model: Review,
+          as: 'ratings',
+          attributes: [],
+        },
+      ],
+      attributes: {
+        include: [
+          [sequelize.fn('AVG', sequelize.col('ratings.rating')), 'avgRating'],
+        ],
+      },
+      group: ['Item.id'],
+    });
+
+    res.status(200).json(newItem);
     res.status(200).json(reviewData);
   } catch (err) {
     res.status(500).json(err);
@@ -38,6 +65,9 @@ router.put('/:id', async (req, res) => {
         id: req.params.id,
       },
     });
+    if (!reviewData) {
+      return res.status(404).json({ message: 'No review found with this id!' });
+    }
     res.status(200).json(reviewData);
   } catch (err) {
     res.status(500).json(err);
