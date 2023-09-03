@@ -24,12 +24,17 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const movieData = await Item.findByPk(req.params.id, {
+    const movieData = await Item.findOne({
       where: {
-        category: category,
+        id: req.params.id,
+        category: 'Movie',
       },
       include: [{ model: Review }],
     });
+
+    if (!movieData) {
+      return res.status(404).json({ message: 'No movie found with this id!' });
+    }
 
     res.status(200).json(movieData);
     // res.status(200).json({ message: 'success' });

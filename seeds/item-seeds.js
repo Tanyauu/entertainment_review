@@ -90,6 +90,161 @@ const itemData = [
     year: 2010,
   },
   {
+
+        category:'TV',
+        name: '24 S1',
+        info: ' 24 is a serial drama starring Kiefer Sutherland as central character Jack Bauer, an agent with the Counter Terrorist Unit (CTU), whose mandate is to protect the United States from terrorist plots. The episodes take place over the course of one hour, depicting events as they happen, in real time.',
+        year: 2001,
+        url: "https://w0.peakpx.com/wallpaper/560/452/HD-wallpaper-24-official-5-city-fox-jack-bauer-twenty-four-tv-24.jpg",
+    },
+    {
+        category:'TV',
+        name: 'The Friends S1',
+        info: 'Comedy series about a tight-knit group of friends living in Manhattan. It also covers their interactions with their families, their lovers, and various colleagues over a period of several years. The series opens with runaway bride Rachel Green, who has just abandoned her fiance Barry Farber at the altar',
+        year: 1994,
+        url: "https://w0.peakpx.com/wallpaper/410/199/HD-wallpaper-friends-friends-tv-show.jpg",
+    },
+    {
+        category:'TV',
+        name: 'Walking Dead S1',
+        info: 'The series features a large ensemble cast as survivors of a zombie apocalypse trying to stay alive under near-constant threat of attacks from zombies chiefly known as "walkers" by the other characters.',
+        year: 2010,
+        url: "https://w0.peakpx.com/wallpaper/560/576/HD-wallpaper-the-walking-dead-walking-dead.jpg",
+    },
+    {
+        category:'TV',
+        name: 'Breaking Bad S1',
+        info: 'Set in Albuquerque, New Mexico, between 2008 and 2010, Breaking Bad follows Walter White, a struggling, frustrated high school chemistry teacher who transforms into a ruthless kingpin in the local methamphetamine drug trade, driven to provide for his family financially after being diagnosed with inoperable lung cancer.',
+        year: 2008,
+        url: "https://w0.peakpx.com/wallpaper/252/484/HD-wallpaper-breaking-bad-bad-breaking-walter.jpg",
+    },
+    {
+        category:'TV',
+        name: 'Game of Thrones S1',
+        info: ' Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for a millennia.',
+        year: 2011,
+        url: "https://w0.peakpx.com/wallpaper/953/946/HD-wallpaper-game-of-thrones-black-game-got-thrones.jpg",
+    },
+    {
+      category:'Game',
+      name:'Red Dead Redemption 2',
+      info:'The third game in Rockstar\'s Wild West-themed series is a prequel to the events of Red Dead Redemption, returning to the open-world action of its predecessor.',
+      year:2019,
+      url:'https://www.giantbomb.com/a/uploads/scale_super/5/56742/3058747-5239356422-528b4.jpg',
+
+    },
+    {
+      category:'Movie',
+      name:'Harry Potter and the prisoner of azkaban',
+      info:'The film follows Harry\'s third year at Hogwarts and his quest to uncover the truth about his past, including the connection recently-escaped Azkaban prisoner Sirius Black has to Harry and his deceased parents.',
+      year:2004,
+      url:'https://w0.peakpx.com/wallpaper/748/210/HD-wallpaper-harry-potter-harry-potter-3-magic-the-prisoner-of-azkaban.jpg',
+
+    },
+    {
+      category:'TV',
+      name:'Stranger Things S4',
+      info:'Darker and denser than its predecessors, Stranger Things\' fourth chapter sets the stage for the show\'s final season in typically bingeworthy fashion',
+      year:2022,
+      url:'https://w0.peakpx.com/wallpaper/808/740/HD-wallpaper-stranger-things-season-4.jpg',
+
+    },
+    {
+      category:'Game',
+      name:'Fallout 4',
+      info:'The Fallout series continues in a post-apocalyptic Boston, Massachusetts.',
+      year:2015,
+      url:'https://www.giantbomb.com/a/uploads/original/8/82063/2795700-2356006370-64616.jpg',
+
+    },
+    {
+      category:'Movie',
+      name:'The Lord of the Rings: The Fellowship of the Ring',
+      info:'The film tells the story of young hobbit Frodo Baggins who, accompanied by eight companions, embarks on a journey to destroy the One Ring',
+      year:2001,
+      url:'https://w0.peakpx.com/wallpaper/937/205/HD-wallpaper-lotr-mines-fellowship-frodo-gandalf-legolas-lord-of-the-rings-ring-rings-the-lord-of-the-rings-the-lotr.jpg',
+
+    },
+    {
+      category:'TV',
+      name:'The Office S1',
+      info:'Season 1 of The Office began airing on March 24, 2005, on NBC. It was based on the BBC series created by Ricky Gervais and Stephen Merchant of the same name',
+      year:2005,
+      url:'https://w0.peakpx.com/wallpaper/736/631/HD-wallpaper-tv-show-the-office-us-the-office.jpg',
+
+    },
+    {
+      category:'Game',
+      name:'Cyberpunk 2077',
+      info:'An open-world action role-playing game by CD Projekt RED based on the pen and paper RPG Cyberpunk 2020.',
+      year:2020,
+      url:'https://www.giantbomb.com/a/uploads/original/0/1992/3364934-2785547186-heade.jpg',
+
+    },
+    {
+      category:'Movie',
+      name:'The Batman',
+      info:'The Batman is a 2022 American superhero film based on the DC Comics character Batman',
+      year:2022,
+      url:'https://w0.peakpx.com/wallpaper/516/268/HD-wallpaper-batman-2022.jpg',
+
+    },
+    {
+      category:'TV',
+      name:'True Detective S1',
+      info:'In 2012, Louisiana State Police Detectives Rust Cohle and Martin Hart are brought in to revisit a homicide case they worked in 1995.',
+      year:2014,
+      url:'https://w0.peakpx.com/wallpaper/124/460/HD-wallpaper-true-detective-show-tv.jpg',
+
+    },
+    {
+      category:'Game',
+      name:'Project Zomboid',
+      info:'Isometric zombie survival, where death is inevitable and all you can hope for is to have a bullet left for your own head.',
+      year:2013,
+      url:'https://www.giantbomb.com/a/uploads/original/16/165036/3253895-pz.jpg',
+
+    },
+    {
+      category:'Movie',
+      name:'Fifty Shades of Grey',
+      info:'Adaptation of E.L. James\' best-selling erotic novel',
+      year:2015,
+      url:'https://w0.peakpx.com/wallpaper/980/765/HD-wallpaper-fifty-shades-of-grey.jpg',
+
+    },
+    {
+      category:'TV',
+      name:'Band of Brothers',
+      info:'Drawn from interviews with survivors of Easy Company, as well as their journals and letters, Band of Brothers chronicles the experiences of these men from paratrooper training in Georgia through the end of the war.',
+      year:2001,
+      url:'https://w0.peakpx.com/wallpaper/515/268/HD-wallpaper-band-of-brothers-band-band-o-brothers-brothers-of.jpg',
+
+    },
+    {
+      category:'Game',
+      name:'Rust',
+      info:'From the makers of Garry\'s Mod, Rust is a multiplayer survival game with combat elements.',
+      year:2018,
+      url:'https://www.giantbomb.com/a/uploads/original/5/56742/2998286-header.jpg',
+
+    },
+    {
+      category:'Movie',
+      name:'The Lion King',
+      info:'The Lion King follows the epic, African adventure of a young lion called Simba as he struggles to accept the responsibilities of adulthood and his destined role as king of the jungle.',
+      year:1994,
+      url:'https://w0.peakpx.com/wallpaper/820/501/HD-wallpaper-lion-king-1994-the-lion-king-lion-movies-disney-simba-deviantart.jpg',
+
+    },
+    {
+      category:'TV',
+      name:'The Wire',
+      info:'The series expands its focus into the media - specifically the role of newspapers in big-city bureaucracy - as it follows a newspaper staff struggling to maintain integrity and meet deadlines in the face of budget cuts and staff reductions.',
+      year:2002,
+      url:'https://w0.peakpx.com/wallpaper/733/707/HD-wallpaper-tv-show-the-wire.jpg',
+
+    },
     category: 'TV',
     name: 'Breaking Bad S1',
     info: 'Set in Albuquerque, New Mexico, between 2008 and 2010, Breaking Bad follows Walter White, a struggling, frustrated high school chemistry teacher who transforms into a ruthless kingpin in the local methamphetamine drug trade, driven to provide for his family financially after being diagnosed with inoperable lung cancer.',
@@ -101,6 +256,7 @@ const itemData = [
     info: ' Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for a millennia.',
     year: 2011,
   },
+
 ];
 
 const seedItems = () => Item.bulkCreate(itemData);
