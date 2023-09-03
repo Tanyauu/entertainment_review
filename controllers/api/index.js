@@ -3,13 +3,14 @@ const gameRoutes = require('./game-routes');
 const movieRoutes = require('./movie-routes');
 const tvRoutes = require('./tv-routes');
 const reviewRoutes = require('./review-routes');
-// const userRoutes = require('./user-routes');
-const itemRoutes = require('./item-routes');
+const userRoutes = require('./user-routes');
+const miscRoutes = require('./misc-routes');
 
 router.use('/games', gameRoutes);
 router.use('/movies', movieRoutes);
 router.use('/tvs', tvRoutes);
 router.use('/reviews', reviewRoutes);
-router.use('/items', itemRoutes);
+router.use('/users', userRoutes);
+router.use('/misc', miscRoutes);
 
 module.exports = router;

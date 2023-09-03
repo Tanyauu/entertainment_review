@@ -26,11 +26,19 @@ Item.init(
       type: DataTypes.STRING(5000),
       allowNull: false,
     },
+    url: {
+      type: DataTypes.TEXT('long'),
+    },
+    // avgRating:{
+    //   type: DataTypes.decimal,
+
+    // },
     year: {
       type: DataTypes.INTEGER,
       allowNull: false,
     }
   },
+
   {
     sequelize,
     timestamps: false,
