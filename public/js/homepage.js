@@ -9,11 +9,11 @@ const movieButtonHandler = async (event) => {
     });
 
     const moviedata = await response.json();
-    let sortedMovies = moviedata.sort((i1,i2) => (i1.rating < i2.rating) ? 1 : (i1.rating < i2.rating) ? -1 : 0);
+    let sortedMovies = moviedata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.avgRating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedMovies.id}`);
-      rkList.innerText = sortedMovies.name;
+      rkList.innerText = sortedMovies[i].name;
       li.appendChild(rkList);
     }
   } catch (error) {
@@ -28,11 +28,11 @@ const tvButtonHandler = async (event) => {
     });
 
     const tvdata = await response.json();
-    let sortedTvs = tvdata.sort((i1,i2) => (i1.rating < i2.rating) ? 1 : (i1.rating < i2.rating) ? -1 : 0);
+    let sortedTvs = tvdata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.avgRating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedTvs.id}`);
-      rkList.innerText = sortedTvs.name;
+      rkList.innerText = sortedTvs[i].name;
       li.appendChild(rkList);
     }
   } catch (error) {
@@ -47,11 +47,11 @@ const gameButtonHandler = async (event) => {
     });
 
     const gamedata = await response.json();
-    let sortedGames = gamedata.sort((i1,i2) => (i1.rating < i2.rating) ? 1 : (i1.rating < i2.rating) ? -1 : 0);
+    let sortedGames = gamedata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.ravgRating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedGames.id}`);
-      rkList.innerText = sortedGames.name;
+      rkList.innerText = sortedGames[i].name;
       li.appendChild(rkList);
     }
   } catch (error) {
@@ -69,8 +69,8 @@ async function fetchYear() {
     let sortedYears = yeardata.sort((i1,i2) => (i1.year < i2.year) ? 1 : (i1.year < i2.year) ? -1 : 0);
     for (i = 0; i < sortedYears.length; i++) {
       let li = document.createElement('li');
-      li.setAttribute("a", href=`/year/${sortedYears.year}`);
-      rkList.innerText = sortedYears.year;
+      li.setAttribute("a", href=`/years/${sortedYears.year}`);
+      rkList.innerText = sortedYears[i].year;
       li.appendChild(rkList);
     }
   } catch (error) {
@@ -78,28 +78,6 @@ async function fetchYear() {
   }
 }
 
-async function carouselRender() {
-  try {
-    const response = await fetch(`/`, {
-      method: 'GET',
-    });
-
-    const itemdata = await response.json();
-    while (true) {
-      carousel.setAttribute("data-carousel-item", "active");
-      img = document.createElement('img');
-      img.src = itemdata[0].url;
-      img.setAttribute("class", "absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2");
-      img.setAttribute("alt", "...");
-      carousel.appendChild(img);
-      let last = itemdata.pop();
-      itemdata.upshift(last);
-      carousel.setAttribute("data-carousel-item", "");
-    }
-  } catch (error) {
-    alert(response.statusText);
-  }
-}
 
 document
   .querySelector('#button1')
@@ -114,4 +92,3 @@ document
   .addEventListener('click', gameButtonHandler);
 
 fetchYear();
-carouselRender();

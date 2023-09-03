@@ -26,11 +26,16 @@ Item.init(
       type: DataTypes.STRING(5000),
       allowNull: false,
     },
+    url: {
+      type: DataTypes.STRING,      
+
+    },
     year: {
       type: DataTypes.INTEGER,
       allowNull: false,
     }
   },
+
   {
     sequelize,
     timestamps: false,
