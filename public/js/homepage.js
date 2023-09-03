@@ -69,7 +69,7 @@ async function fetchYear() {
     let sortedYears = yeardata.sort((i1,i2) => (i1.year < i2.year) ? 1 : (i1.year < i2.year) ? -1 : 0);
     for (i = 0; i < sortedYears.length; i++) {
       let li = document.createElement('li');
-      li.setAttribute("a", href=`/year/${sortedYears.year}`);
+      li.setAttribute("a", href=`/years/${sortedYears.year}`);
       rkList.innerText = sortedYears[i].year;
       li.appendChild(rkList);
     }
