@@ -24,12 +24,17 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const tvData = await Item.findByPk(req.params.id, {
+    const tvData = await Item.findOne({
       where: {
+        id: req.params.id,
         category: category,
       },
       include: [{ model: Review }],
     });
+
+    if (!tvData) {
+      return res.status(404).json({ message: 'No tv found with this id!' });
+    }
     res.status(200).json(tvData);
     // res.status(200).json({ message: 'success' });
   } catch (err) {

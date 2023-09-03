@@ -24,12 +24,17 @@ router.get('/', async (req, res) => {
 
 router.get('/:id', async (req, res) => {
   try {
-    const gameData = await Item.findByPk(req.params.id, {
+    const gameData = await Item.findOne({
       where: {
+        id: req.params.id,
         category: category,
       },
       include: [{ model: Review }],
     });
+
+    if (!gameData) {
+      return res.status(404).json({ message: 'No game found with this id!' });
+    }
     res.status(200).json(gameData);
     // res.status(200).json({ message: 'success' });
   } catch (err) {
