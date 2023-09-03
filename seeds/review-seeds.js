@@ -64,6 +64,13 @@ const reviewData = [
         user_id:2,
 
     },
+    // {
+    //     text: "",
+    //     item_id:15,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
     {
         text: "It’s not hard to get lost in the deep, subterranean world of Hollow Knight – and I mean that in more ways than one. ",
         item_id: 1 ,
@@ -106,6 +113,175 @@ const reviewData = [
         user_id: 1 ,
 
     },
+    // {
+    //     text: "",
+    //     item_id: 16,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 17,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 18,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 19,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id:  19,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 19 ,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 20,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 21,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 22,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 23,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 24,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 24,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 24,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 24,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 25,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 26,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 27,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 28,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id: 29,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id:30,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id:30,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id:30,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id:  ,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+    // {
+    //     text: "",
+    //     item_id:  ,
+    //     rating: ,
+    //     user_id:  ,
+
+    // },
+
 
 
 ];
