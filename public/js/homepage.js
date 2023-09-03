@@ -1,6 +1,5 @@
 let rkList = document.querySelector("#rk-list");
 let yrList = document.querySelector("#yr-list");
-let carousel = document.querySelector("#carousel");
 
 const movieButtonHandler = async (event) => {
   try {
