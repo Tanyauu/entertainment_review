@@ -8,14 +8,16 @@ const movieButtonHandler = async (event) => {
     });
 
     const moviedata = await response.json();
-    let sortedMovies = moviedata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.avgRating) ? -1 : 0);
-    for (i = 0; i < 10; i++) {
+    console.log(moviedata);
+    let sortedMovies = moviedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
+    for (i = 0; i < 9; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedMovies.id}`);
       li.setAttribute("class", "hover:text-yellow-400");
       rkList.innerText = sortedMovies[i].name;
       li.appendChild(rkList);
     }
+    console.log(rkList);
   } catch (error) {
     alert(response.statusText);
   }
@@ -28,8 +30,9 @@ const tvButtonHandler = async (event) => {
     });
 
     const tvdata = await response.json();
-    let sortedTvs = tvdata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.avgRating) ? -1 : 0);
-    for (i = 0; i < 10; i++) {
+    let sortedTvs = tvdata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
+    console.log(sortedTvs);
+    for (i = 0; i < 9; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedTvs.id}`);
       li.setAttribute("class", "hover:text-yellow-400");
@@ -46,10 +49,10 @@ const gameButtonHandler = async (event) => {
     const response = await fetch(`/api/games`, {
       method: 'GET',
     });
-
+    console.log("hello3")
     const gamedata = await response.json();
-    let sortedGames = gamedata.sort((i1,i2) => (i1.avgRating < i2.avgRating) ? 1 : (i1.avgRating < i2.ravgRating) ? -1 : 0);
-    for (i = 0; i < 10; i++) {
+    let sortedGames = gamedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
+    for (i = 0; i < 9; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedGames.id}`);
       li.setAttribute("class", "hover:text-yellow-400");

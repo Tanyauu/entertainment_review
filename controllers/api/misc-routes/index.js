@@ -51,7 +51,7 @@ router.get('/groupyears', async (req, res) => {
   try {
     const years = await Item.aggregate('year', 'DISTINCT', {
       plain: false,
-      order: [['year', 'ASC']],
+      order: [['year', 'DESC']],
     });
 
     const groupedItems = [];
