@@ -12,6 +12,7 @@ const movieButtonHandler = async (event) => {
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedMovies.id}`);
+      li.setAttribute("class", "hover:text-yellow-400");
       rkList.innerText = sortedMovies[i].name;
       li.appendChild(rkList);
     }
@@ -31,6 +32,7 @@ const tvButtonHandler = async (event) => {
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedTvs.id}`);
+      li.setAttribute("class", "hover:text-yellow-400");
       rkList.innerText = sortedTvs[i].name;
       li.appendChild(rkList);
     }
@@ -50,6 +52,7 @@ const gameButtonHandler = async (event) => {
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/item/${sortedGames.id}`);
+      li.setAttribute("class", "hover:text-yellow-400");
       rkList.innerText = sortedGames[i].name;
       li.appendChild(rkList);
     }
@@ -70,6 +73,7 @@ async function fetchYear() {
     for (i = 0; i < sortedYears.length; i++) {
       let li = document.createElement('li');
       li.setAttribute("a", href=`/api/misc/year/${sortedYears.year}`);
+      li.setAttribute("class", "hover:text-yellow-400");
       rkList.innerText = sortedYears[i].year;
       li.appendChild(rkList);
     }
