@@ -1259,6 +1259,10 @@ input:checked + .toggle-bg {
   height: 0.625rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
 .h-4 {
   height: 1rem;
 }
@@ -1285,6 +1289,10 @@ input:checked + .toggle-bg {
 
 .h-full {
   height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
 }
 
 .w-1\/2 {
@@ -1411,8 +1419,8 @@ input:checked + .toggle-bg {
   list-style-type: decimal;
 }
 
-.list-disc {
-  list-style-type: disc;
+.list-none {
+  list-style-type: none;
 }
 
 .grid-cols-2 {
