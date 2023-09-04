@@ -234,13 +234,13 @@ const reviewData = [
         user_id: 3,
 
     },
-    {
-        text: "It is compulsively watchable while providing a comfortable sense of the familiar and total immediacy.",
-        item_id: 24,
-        rating: 4,
-        user_id: 4,
+    // {
+    //     text: "It is compulsively watchable while providing a comfortable sense of the familiar and total immediacy.",
+    //     item_id: 24,
+    //     rating: 4,
+    //     user_id: 4,
 
-    },
+    // },
     {
         text: "I found a newspaper a made a hat with it, 10/10 game,",
         item_id: 25,
