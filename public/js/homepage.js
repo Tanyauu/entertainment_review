@@ -60,15 +60,16 @@ const gameButtonHandler = async (event) => {
 
 async function fetchYear() {
   try {
-    const response = await fetch(`/api/years`, {
+    const response = await fetch(`/api/misc/groupyears`, {
       method: 'GET',
     });
 
     const yeardata = await response.json();
-    let sortedYears = yeardata.sort((i1,i2) => (i1.year < i2.year) ? 1 : (i1.year < i2.year) ? -1 : 0);
+    // let sortedYears = yeardata.sort((i1,i2) => (i1.year < i2.year) ? 1 : (i1.year < i2.year) ? -1 : 0);
+    let sortedYears = yeardata;
     for (i = 0; i < sortedYears.length; i++) {
       let li = document.createElement('li');
-      li.setAttribute("a", href=`/years/${sortedYears.year}`);
+      li.setAttribute("a", href=`/api/misc/year/${sortedYears.year}`);
       rkList.innerText = sortedYears[i].year;
       li.appendChild(rkList);
     }
