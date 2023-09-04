@@ -49,12 +49,12 @@
             </ul>
         </div>
       </div>     
-      <ol id="rk-list" class="space-y-1 text-gray-500 list-disc list-inside dark:text-gray-400">
+      <ol id="rk-list" class="space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400">
         <!-- Render list in scripts -->
       </ol>
     </div>
 
-    <div class="col-span-4 row-span-5 col-start-3 row-start-4 overflow-y-auto">
+    <div class="col-span-4 row-span-5 col-start-3 row-start-4 h-96 overflow-y-auto">
     {{#each items as |item|}}
     {{> item-details item}}
     {{/each}}
@@ -62,8 +62,8 @@
 
     <div class="col-span-2 row-span-5 col-start-7 row-start-4 overflow-y-auto">
       <div class="block w-full h-full p-6 bg-white border border-gray-200 rounded-none shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
-        <h2 class="text-center mb-2 text-lg font-semibold text-gray-900 dark:text-slate-400">Production Year:</h2>
-        <ol id="yr-list" class="text-center max-w-md space-y-1 text-gray-500 list-decimal list-inside dark:text-gray-400">
+        <h2 class="text-center mb-2 text-lg font-semibold text-gray-900 dark:text-slate-400">Production Year</h2>
+        <ol id="yr-list" class="text-center max-w-md space-y-1 text-gray-500 list-none list-inside dark:text-gray-400">
           <!-- Render list in scripts -->
         </ol>
       </div>
