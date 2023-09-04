@@ -69,7 +69,7 @@ async function ratingRender() {
       star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
       star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
     } else {
-      star1.setAttribute("class", "w-4 h-4 text-yellow-300");
+      star1.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
       star2.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
       star3.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
       star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
