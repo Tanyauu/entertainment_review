@@ -1,17 +1,16 @@
 
 const editFormHandler = async (event) => {
   event.preventDefault();
-  if (event.target.hasAttribute('data-id')) {
-    const user_id = event.target.getAttribute('data-id');
 
     const text = document.querySelector('#review-desc').value.trim();
 
     const rating = document.querySelector('#review-desc').value;
-
-    if (text) {
+    console.log(text);
+    console.log(rating);
+    if (text && rating) {
       const response = await fetch(`/api/reviews/${id}`, {
         method: 'PUT',
-        body: JSON.stringify({ user_id, text, rating }),
+        body: JSON.stringify({ text, rating }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -23,7 +22,6 @@ const editFormHandler = async (event) => {
         alert('Failed to update review');
       }
     } 
-  }
 };
 
 const delButtonHandler = async (event) => {
