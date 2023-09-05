@@ -8,13 +8,15 @@
         {{log user}}
     <div class="col-span-8 row-span-6 row-start-3">
       {{#if user.reviews.length}}
+      {{#if user.reviews.length}}
         <div class="block w-full p-6 bg-white border border-gray-200 rounded-none shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
             <h5 class="text-left mb-2 text-2xl tracking-tight text-gray-900 dark:text-white">Your reviews:</h5>
         </div>
         {{#each user.reviews as |review|}}
+        {{#each user.reviews as |review|}}
             <div class="block w-full p-6 bg-white border border-gray-200 rounded-none shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                 <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{review.item.name}}</h5>
-                <p class="font-normal text-gray-700 dark:text-gray-400">{{review.text}}</p>
+                <p class="font-normal text-gray-700 dark:text-gray-400">{{review.item.info}}</p>
                 {{#ifEquals review.rating "1"}}
                 <div class="flex items-center">
                     <svg id="star-1" class="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
