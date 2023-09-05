@@ -1,1 +1,1 @@
-# tech_blog
+# Entertainment Reviewing Website

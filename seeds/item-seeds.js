@@ -7,6 +7,7 @@ const itemData = [
     info: 'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.',
     year: 2017,
     url: 'https://www.giantbomb.com/a/uploads/original/24/240391/3355540-co1rgi.png',
+    avgRating:5,
   },
   {
     category: 'Game',
@@ -14,6 +15,7 @@ const itemData = [
     info: 'Help little Peet hack-and-slash his way through a beautifully haunting coma. A hand-drawn action-adventure through a dreamy world filled with fleshy monsters, insane grown-ups, and sad children looking for their mommies.',
     year: 2019,
     url: 'https://www.giantbomb.com/a/uploads/original/10/103881/3188864-3188595-neversong-artwork-key-art%20%281%29.jpg',
+    avgRating:4,
   },
   {
     category: 'Game',
@@ -21,6 +23,7 @@ const itemData = [
     info: 'Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.',
     year: 2013,
     url: 'https://www.giantbomb.com/a/uploads/original/0/1992/3368076-0574460249-GTAV-product-master-01-en-3mar22.jpg',
+    avgRating:4,
   },
   {
     category: 'Game',
@@ -35,6 +38,7 @@ const itemData = [
     info: 'In Marvel’s Spider-Man Remastered, the worlds of Peter Parker and Spider-Man collide in an original action-packed story. Play as an experienced Peter Parker, fighting big crime and iconic villains in Marvel’s New York. Web-swing through vibrant neighborhoods and defeat villains with epic takedowns.',
     year: 2018,
     url: 'https://www.giantbomb.com/a/uploads/scale_medium/0/3699/3037524-marvel%27s%20spider-man.jpg',
+    avgRating:2,
   },
   {
     category: 'Movie',
@@ -56,6 +60,7 @@ const itemData = [
     info: 'The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.',
     year: 1994,
     url: 'https://w0.peakpx.com/wallpaper/747/157/HD-wallpaper-pulp-fiction-red-black-hair.jpg',
+    avgRating:4,
   },
   {
     category: 'Movie',

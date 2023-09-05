@@ -29,10 +29,11 @@ Item.init(
     url: {
       type: DataTypes.TEXT('long'),
     },
-    // avgRating:{
-    //   type: DataTypes.decimal,
+    avgRating:{
+      type: DataTypes.DECIMAL,
+      defaultValue: 5,
 
-    // },
+    },
     year: {
       type: DataTypes.INTEGER,
       allowNull: false,
