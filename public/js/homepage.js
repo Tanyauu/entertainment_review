@@ -8,7 +8,9 @@ const movieButtonHandler = async (event) => {
     });
 
     const moviedata = await response.json();
-    rkList.innerHTML = "";
+    while(rkList.firstChild) {
+      rkList.removeChild(rkList.firstChild);
+    }
     let sortedMovies = moviedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
@@ -32,7 +34,9 @@ const tvButtonHandler = async (event) => {
     });
 
     const tvdata = await response.json();
-    rkList.innerHTML = "";
+    while(rkList.firstChild) {
+      rkList.removeChild(rkList.firstChild);
+    }
     let sortedTvs = tvdata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
@@ -55,7 +59,9 @@ const gameButtonHandler = async (event) => {
     });
 
     const gamedata = await response.json();
-    rkList.innerHTML = "";
+    while(rkList.firstChild) {
+      rkList.removeChild(rkList.firstChild);
+    }
     let sortedGames = gamedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
@@ -78,7 +84,6 @@ async function fetchYear() {
     });
 
     const yeardata = await response.json();
-    yrList.innerHTML = "";
     // let sortedYears = yeardata.sort((i1,i2) => (i1.year < i2.year) ? 1 : (i1.year < i2.year) ? -1 : 0);
     let sortedYears = yeardata;
     console.log(yeardata);
@@ -89,25 +94,49 @@ async function fetchYear() {
       a.setAttribute("class", "hover:text-yellow-400");
       a.innerText = sortedYears[i].year;
       li.appendChild(a);
-      yrList.appendChild(li);
+      if (li != null) {
+        yrList.appendChild(li);
+      }
     }
     console.log(yrList);
   } catch (error) {
-    alert(response.statusText);
+    console.log(error);
   }
 }
 
+window.addEventListener("DOMContentLoaded", (event) => {
+  const el = document.getElementById('button1');
+  if (el) {
+    el.addEventListener('click', movieButtonHandler);
+  }
+});
 
-document
-  .querySelector('#button1')
-  .addEventListener('click', movieButtonHandler);
+window.addEventListener("DOMContentLoaded", (event) => {
+  const el = document.getElementById('button2');
+  if (el) {
+    el.addEventListener('click', tvButtonHandler);
+  }
+});
 
-document
-  .querySelector('#button2')
-  .addEventListener('click', tvButtonHandler);
+window.addEventListener("DOMContentLoaded", (event) => {
+  const el = document.getElementById('button3');
+  if (el) {
+    el.addEventListener('click', gameButtonHandler);
+  }
+});
 
-document
-  .querySelector('#button3')
-  .addEventListener('click', gameButtonHandler);
+// document
+//   .querySelector('#button1')
+//   .addEventListener('click', movieButtonHandler);
+
+// document
+//   .querySelector('#button2')
+//   .addEventListener('click', tvButtonHandler);
+
+// document
+//   .querySelector('#button3')
+//   .addEventListener('click', gameButtonHandler);
 
 fetchYear();
+
+
