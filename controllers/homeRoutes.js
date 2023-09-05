@@ -4,23 +4,11 @@ const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // const gameData = await Game.findAll({
-    //   include: [{ model: Review }],
-    // });
-    // const movieData = await Movie.findAll({
-    //   include: [{ model: Review }],
-    // });
-    // const tvData = await TV.findAll({
-    //   include: [{ model: Review }],
-    // });
     const itemData = await Item.findAll({
       include: [{ model: Review }],
     });
     const items = itemData.map((item) => item.get({ plain: true }));
     res.render('homepage', {
-      // gameData,
-      // movieData,
-      // tvData,
       items,
     });
   } catch (error) {
@@ -37,19 +25,16 @@ router.get('/dashboard', withAuth, async (req, res) => {
       include: [
         {
           model: Review,
-          include: [
-            { model: Item },
-          ],
+          include: [{ model: Item }],
         },
       ],
     });
 
     const user = userData.get({ plain: true });
-    const items = user.reviews.map((review) => review.item);
-
+    const reviewData = user.reviews.map((review) => review.item);
     res.render('dashboard', {
       user,
-      items,
+      reviewData,
       logged_in: true,
     });
   } catch (err) {
