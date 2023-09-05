@@ -12,9 +12,11 @@ const movieButtonHandler = async (event) => {
     let sortedMovies = moviedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
-      li.setAttribute("href", `/api/items/${sortedMovies[i].id}`);
-      li.setAttribute("class", "hover:text-yellow-400");
-      li.innerText = sortedMovies[i].name;
+      let a = document.createElement('a');
+      a.setAttribute("href", `/api/items/${sortedMovies[i].id}`);
+      a.innerText = sortedMovies[i].name;
+      a.setAttribute("class", "hover:text-yellow-400");
+      li.appendChild(a);
       rkList.appendChild(li);
     }
     console.log(rkList);
@@ -34,9 +36,11 @@ const tvButtonHandler = async (event) => {
     let sortedTvs = tvdata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
-      li.setAttribute("href", `/api/items/${sortedTvs[i].id}`);
-      li.setAttribute("class", "hover:text-yellow-400");
-      li.innerText = sortedTvs[i].name;
+      let a = document.createElement('a');
+      a.setAttribute("href", `/api/items/${sortedTvs[i].id}`);
+      a.innerText = sortedTvs[i].name;
+      a.setAttribute("class", "hover:text-yellow-400");
+      li.appendChild(a);
       rkList.appendChild(li);
     }
   } catch (error) {
@@ -55,9 +59,11 @@ const gameButtonHandler = async (event) => {
     let sortedGames = gamedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
-      li.setAttribute("href", `/api/item/${sortedGames[i].id}`);
-      li.setAttribute("class", "hover:text-yellow-400");
-      li.innerText = sortedGames[i].name;
+      let a = document.createElement('a');
+      a.setAttribute("href", `/api/items/${sortedGames[i].id}`);
+      a.innerText = sortedGames[i].name;
+      a.setAttribute("class", "hover:text-yellow-400");
+      li.appendChild(a);
       rkList.appendChild(li);
     }
   } catch (error) {
@@ -78,9 +84,11 @@ async function fetchYear() {
     console.log(yeardata);
     for (i = 0; i < sortedYears.length; i++) {
       let li = document.createElement('li');
-      li.setAttribute("href", `/api/misc/year/${sortedYears[i].year}`);
-      li.setAttribute("class", "hover:text-yellow-400");
-      li.innerText = sortedYears[i].year;
+      let a = document.createElement('a');
+      a.setAttribute("href", `/api/misc/year/${sortedYears[i].year}`);
+      a.setAttribute("class", "hover:text-yellow-400");
+      a.innerText = sortedYears[i].year;
+      li.appendChild(a);
       yrList.appendChild(li);
     }
     console.log(yrList);
