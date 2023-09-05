@@ -38,7 +38,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         {
           model: Review,
           include: [
-            { model: Item, attributes: ['category', 'name', 'info', 'url'] },
+            { model: Item },
           ],
         },
       ],
