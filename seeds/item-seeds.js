@@ -216,7 +216,6 @@ const itemData = [
     category: 'TV',
     name: 'Squid Game',
     info: 'The series revolves around a secret contest where 456 players, all of whom are in deep financial hardship, risk their lives to play a series of deadly games',
-    // info: 'the series',
     year: '2021',
     url: 'https://w0.peakpx.com/wallpaper/668/371/HD-wallpaper-squid-games-squid-games.jpg',
   },
