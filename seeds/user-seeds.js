@@ -22,8 +22,15 @@ const userData = [
     email: "sal@ex.com",
     password: "$2b$10$sWF860n2rH4rITbDtrcdJOXwlDxEY1x6y.BDANypJFgN2jwV3uNcK",
     // actualpassword:"password";
-
+  },
+  {
+    id: 5,
+    name: "ram",
+    email: "ram@ent.com",
+    password: "$2b$10$O41SxWT.KsanvFROhPlSU.EYK5GzU.gAZyuF4Xw6hpLNGUWwJj/ca",
+    //actualpassword:"passent";
   }
+
 
 ];
 

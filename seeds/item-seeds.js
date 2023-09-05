@@ -212,6 +212,48 @@ const itemData = [
     year: 2002,
     url: 'https://w0.peakpx.com/wallpaper/733/707/HD-wallpaper-tv-show-the-wire.jpg',
   },
+  {
+    category: 'TV',
+    name: 'Squid Game',
+    info: 'The series revolves around a secret contest where 456 players, all of whom are in deep financial hardship, risk their lives to play a series of deadly children\'s games for the chance to win a ₩45.6 billion prize.',
+    year: '2021',
+    url: 'https://w0.peakpx.com/wallpaper/668/371/HD-wallpaper-squid-games-squid-games.jpg',
+  },
+  {
+    category: 'Movie',
+    name: 'The Matrix',
+    info: 'Depicts a dystopian future in which humanity is unknowingly trapped inside the Matrix, a simulated reality that intelligent machines have created to distract humans',
+    year: '1999',
+    url: 'https://w0.peakpx.com/wallpaper/668/945/HD-wallpaper-the-matrix-1999-movie-1999-film-the-matrix-actors.jpg',
+  },
+  {
+    category: 'Game',
+    name: 'Super Mario Bros',
+    info: 'The game is based on a series of side-scrolling levels, each filled with enemies ranging from mushroomlike Goombas to evil turtles known as Koopa Troopas.',
+    year: '1985',
+    url: 'https://www.giantbomb.com/a/uploads/scale_super/9/93770/2362268-nes_supermariobros_eu.jpg',
+  },
+  {
+    category: 'TV',
+    name: 'Chernobyl',
+    info: 'Chernobyl is a historical drama television miniseries that revolves around the Chernobyl disaster of 1986 and the cleanup efforts that followed',
+    year: '2019',
+    url: 'https://w0.peakpx.com/wallpaper/292/681/HD-wallpaper-chernobyl-1986-abej-beograd.jpg',
+  },
+  {
+    category: 'Movie',
+    name: 'Mad Max: Fury Road',
+    info: 'In a post-apocalyptic wasteland, a woman rebels against a tyrannical ruler in search for her homeland with the aid of a group of female prisoners, a psychotic worshiper and a drifter named Max.',
+    year: '2015',
+    url: 'https://w0.peakpx.com/wallpaper/104/277/HD-wallpaper-mad-max-fury-road-movie-mad-max-fury-road-movies.jpg',
+  },
+  {
+    category: 'Game',
+    name: 'Sonic the hedgehog',
+    info: 'Sonic is an anthropomorphic blue hedgehog who can run at supersonic speeds and curl into a ball to attack enemies.',
+    year: '1991',
+    url: 'https://www.giantbomb.com/a/uploads/original/0/3693/609697-ss_08.27.2008_08.57.11pm.jpg',
+  },
 
 ];
 
