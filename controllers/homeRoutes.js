@@ -34,13 +34,23 @@ router.get('/dashboard', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Review, include: [{model: Item}],}]
+      include: [
+        {
+          model: Review,
+          include: [
+            { model: Item },
+          ],
+        },
+      ],
     });
 
     const user = userData.get({ plain: true });
+    const items = user.reviews.map((review) => review.item);
+
     res.render('dashboard', {
       user,
-      logged_in: true
+      items,
+      logged_in: true,
     });
   } catch (err) {
     res.status(500).json(err);
