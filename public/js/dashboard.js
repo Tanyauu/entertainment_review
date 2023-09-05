@@ -42,54 +42,54 @@ const delButtonHandler = async (event) => {
   }
 };
 
-async function ratingRender() {
-  try {
-    const response = await fetch(`/api/reviews`, {
-      method: 'GET',
-    });
+// async function ratingRender() {
+//   try {
+//     const response = await fetch(`/api/reviews`, {
+//       method: 'GET',
+//     });
 
-    const itemdata = await response.json();
-    if (Math.floor(itemdata.rating) == 5) {
-      star1.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star2.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star3.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star4.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star5.setAttribute("class", "w-4 h-4 text-yellow-300");
-    } else if (Math.floor(itemdata.rating) ==4) {
-      star1.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star2.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star3.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star4.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
-    } else if (Math.floor(itemdata.rating) ==3) {
-      star1.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star2.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star3.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
-    } else if (Math.floor(itemdata.rating) ==2) {
-      star1.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star2.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star3.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
-    } else if (Math.floor(itemdata.rating) ==1) {
-      star1.setAttribute("class", "w-4 h-4 text-yellow-300");
-      star2.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star3.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
-    } else {
-      star1.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star2.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star3.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
-      star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
-    }
-  } catch (error) {
-    alert(response.statusText);
-  }
-}
+//     const itemdata = await response.json();
+//     if (Math.floor(itemdata.rating) == 5) {
+//       star1.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star2.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star3.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star4.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star5.setAttribute("class", "w-4 h-4 text-yellow-300");
+//     } else if (Math.floor(itemdata.rating) ==4) {
+//       star1.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star2.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star3.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star4.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
+//     } else if (Math.floor(itemdata.rating) ==3) {
+//       star1.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star2.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star3.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
+//     } else if (Math.floor(itemdata.rating) ==2) {
+//       star1.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star2.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star3.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
+//     } else if (Math.floor(itemdata.rating) ==1) {
+//       star1.setAttribute("class", "w-4 h-4 text-yellow-300");
+//       star2.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star3.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
+//     } else {
+//       star1.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star2.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star3.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star4.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");
+//       star5.setAttribute("class", "w-4 h-4 text-gray-300 dark:text-gray-500");     
+//     }
+//   } catch (error) {
+//     alert(response.statusText);
+//   }
+// }
 
 document
   .querySelector('#edit-review-form')
@@ -99,4 +99,4 @@ document
   .querySelector('.delete-review-form')
   .addEventListener('click', delButtonHandler);
 
-ratingRender();
+// ratingRender();
