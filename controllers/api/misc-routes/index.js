@@ -15,8 +15,12 @@ router.get('/year/:year', async (req, res) => {
         .status(404)
         .json({ message: 'No item(s) found for the specified year.' });
     }
-    res.status(200).json(itemData);
-    // res.status(200).json({ message: 'success' });
+    const items = itemData.map((item) => item.get({ plain: true }));
+
+    res.render('year', {
+      items,
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
