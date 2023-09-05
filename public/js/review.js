@@ -1,32 +1,33 @@
-let star1 = document.querySelector("#star-1");
-let star2 = document.querySelector("#star-2");
-let star3 = document.querySelector("#star-3");
-let star4 = document.querySelector("#star-4");
-let star5 = document.querySelector("#star-5");
+// let star1 = document.querySelector("#star-1");
+// let star2 = document.querySelector("#star-2");
+// let star3 = document.querySelector("#star-3");
+// let star4 = document.querySelector("#star-4");
+// let star5 = document.querySelector("#star-5");
 
 const reviewFormHandler = async (event) => {
   event.preventDefault();
-  if (event.target.hasAttribute('data-id')) {
-    const user_id = event.target.getAttribute('data-id');
+  const item_id = window.location.toString().split('/')[
+    window.location.toString().split('/').length-1
+  ];
 
-    const text = document.querySelector('#review-desc').value.trim();
+  const text = document.querySelector('#review-desc').value.trim();
 
-    const rating = document.querySelector('#review-rating').value;
-  
-    if (text) {
-      const response = await fetch(`/api/reviews`, {
-        method: 'POST',
-        body: JSON.stringify({ user_id, text, rating }),
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      });
-  
-      if (response.ok) {
-        document.location.replace('/item');
-      } else {
-        alert('Failed to create review');
-      }
+  const rating = document.querySelector('#review-rating').value;
+  console.log(text);
+  console.log(rating);
+  if (text) {
+    const response = await fetch(`/api/reviews`, {
+      method: 'POST',
+      body: JSON.stringify({ item_id, text, rating }),
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    if (response.ok) {
+      document.location.replace(`/api/items/${item_id}`);
+    } else {
+      alert('Failed to create review');
     }
   }
 };
