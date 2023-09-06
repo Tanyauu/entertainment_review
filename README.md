@@ -31,8 +31,11 @@ Reviewing an entertainment media can be beneficial to both the consumers and cre
 <ul>
 <li>Clone this project in your local machine</li>
 <li>Modify the .env file</li>
-<li>Run <mark style="font-weight: bold;background-color: lightgrey">npm run tailwind</mark> in your bash/command line</li>
-<li>Run <mark style="font-weight: bold; background-color: lightgrey">npm i</mark> in your bash/command line</li>
+<li>Run 
+```
+npm run tailwind
+``` in your bash/command line</li>
+<li>Run <span style="font-weight: bold;background-color: lightgrey;color:black"">npm i</span> in your bash/command line</li>
 <li>Host the project in your local machine</li>
 
 
@@ -41,7 +44,7 @@ Reviewing an entertainment media can be beneficial to both the consumers and cre
 ### Future Developments
 
 ### Links
-Github Repository:
+Github Repository: https://github.com/JesseCh3n/entertainment_review
 
-Heroku application:
+Heroku application: https://evening-cove-52840-9f06a2ce0b05.herokuapp.com/
 
