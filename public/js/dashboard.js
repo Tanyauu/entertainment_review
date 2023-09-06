@@ -1,18 +1,13 @@
-const editBtn = document.querySelectorAll('.review-form');
+const editBtn = document.querySelectorAll('.edit-button');
 const deleteBtn = document.querySelectorAll('.delete-button');
 
 
 const editFormHandler = async (event) => {
-  console.log(event);
-  event.preventDefault();
-  // if (event.target.hasAttribute('data-id')) {    
+  event.preventDefault(); 
     console.log(event.target);
-    const id = event.target.getAttribute('data-form');
+    const id = event.target.parentElement.getAttribute('data-form');
     const text = document.querySelector(`[data-text="${id}"]`).value.trim();
     const rating = document.querySelector(`[data-rating="${id}"]`).value;
-    console.log(id);
-    console.log(text);
-    console.log(rating);
     if (text && rating) {
       const response = await fetch(`/api/reviews/${id}`, {
         method: 'PUT',
@@ -28,7 +23,6 @@ const editFormHandler = async (event) => {
         alert('Failed to update review');
       }
     } 
-  // }
 };
 
 const delButtonHandler = async (event) => {
@@ -49,7 +43,7 @@ const delButtonHandler = async (event) => {
 
 
 editBtn.forEach(function(button) {
-  button.addEventListener('submit', editFormHandler);
+  button.addEventListener('click', editFormHandler);
 });
 
 deleteBtn.forEach(function(button) {
