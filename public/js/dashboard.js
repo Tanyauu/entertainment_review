@@ -7,8 +7,8 @@ const editFormHandler = async (event) => {
   // if (event.target.hasAttribute('data-id')) {    
     console.log(event.target);
     const id = event.target.getAttribute('data-id');
-    const text = document.getElementById('review').value.trim();
-    const rating = document.getElementById('rating').value;
+    const text = document.querySelector(`[data-text="${id}"]`).value.trim();
+    const rating = document.querySelector(`[data-rating="${id}"]`).value;
     console.log(id);
     console.log(text);
     console.log(rating);
@@ -53,4 +53,3 @@ editBtn.forEach(function(button) {
 deleteBtn.forEach(function(button) {
   button.addEventListener('click', delButtonHandler);
 });
-
