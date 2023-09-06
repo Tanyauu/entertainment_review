@@ -11,7 +11,7 @@ const movieButtonHandler = async (event) => {
     while(rkList.firstChild) {
       rkList.removeChild(rkList.firstChild);
     }
-    let sortedMovies = moviedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
+    let sortedMovies = moviedata.sort(function(a, b){return (b.reviews.reduce((x,y) => x + y.rating, 0)/b.reviews.length) - (a.reviews.reduce((x,y) => x + y.rating, 0)/a.reviews.length)});
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       let a = document.createElement('a');
@@ -37,7 +37,7 @@ const tvButtonHandler = async (event) => {
     while(rkList.firstChild) {
       rkList.removeChild(rkList.firstChild);
     }
-    let sortedTvs = tvdata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
+    let sortedTvs = tvdata.sort(function(a, b){return (b.reviews.reduce((x,y) => x + y.rating, 0)/b.reviews.length) - (a.reviews.reduce((x,y) => x + y.rating, 0)/a.reviews.length)});
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       let a = document.createElement('a');
@@ -62,7 +62,7 @@ const gameButtonHandler = async (event) => {
     while(rkList.firstChild) {
       rkList.removeChild(rkList.firstChild);
     }
-    let sortedGames = gamedata.sort((i1,i2) => (i1.reviews[0].rating < i2.reviews[0].rating) ? 1 : (i1.reviews[0].rating < i2.reviews[0].rating) ? -1 : 0);
+    let sortedGames = gamedata.sort(function(a, b){return (b.reviews.reduce((x,y) => x + y.rating, 0)/b.reviews.length) - (a.reviews.reduce((x,y) => x + y.rating, 0)/a.reviews.length)});
     for (i = 0; i < 10; i++) {
       let li = document.createElement('li');
       let a = document.createElement('a');

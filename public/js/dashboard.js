@@ -1,12 +1,13 @@
-editBtn = document.querySelectorAll('.review-form');
-deleteBtn = document.querySelectorAll('.delete-button');
+const editBtn = document.querySelectorAll('.review-form');
+const deleteBtn = document.querySelectorAll('.delete-button');
 
 
 const editFormHandler = async (event) => {
+  console.log(event);
   event.preventDefault();
   // if (event.target.hasAttribute('data-id')) {    
     console.log(event.target);
-    const id = event.target.getAttribute('data-id');
+    const id = event.target.getAttribute('data-form');
     const text = document.querySelector(`[data-text="${id}"]`).value.trim();
     const rating = document.querySelector(`[data-rating="${id}"]`).value;
     console.log(id);
@@ -45,6 +46,7 @@ const delButtonHandler = async (event) => {
     }
   }
 };
+
 
 editBtn.forEach(function(button) {
   button.addEventListener('submit', editFormHandler);
