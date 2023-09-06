@@ -5,11 +5,9 @@ const reviewFormHandler = async (event) => {
   ];
 
   const text = document.querySelector('#review-desc').value.trim();
-
   const rating = document.querySelector('#review-rating').value;
-  console.log(text);
-  console.log(rating);
-  if (text) {
+
+  if (text && rating) {
     const response = await fetch(`/api/reviews`, {
       method: 'POST',
       body: JSON.stringify({ item_id, text, rating }),
@@ -25,7 +23,6 @@ const reviewFormHandler = async (event) => {
     }
   }
 };
-
 
 document
   .querySelector('.review-form')

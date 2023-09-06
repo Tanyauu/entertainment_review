@@ -21,7 +21,7 @@ const movieButtonHandler = async (event) => {
       li.appendChild(a);
       rkList.appendChild(li);
     }
-    console.log(rkList);
+    // console.log(rkList);
   } catch (error) {
     alert(response.statusText);
   }
@@ -86,7 +86,7 @@ async function fetchYear() {
     const yeardata = await response.json();
     // let sortedYears = yeardata.sort((i1,i2) => (i1.year < i2.year) ? 1 : (i1.year < i2.year) ? -1 : 0);
     let sortedYears = yeardata;
-    console.log(yeardata);
+    // console.log(yeardata);
     for (i = 0; i < sortedYears.length; i++) {
       let li = document.createElement('li');
       let a = document.createElement('a');
@@ -96,9 +96,9 @@ async function fetchYear() {
       li.appendChild(a);
       yrList.appendChild(li);
     }
-    console.log(yrList);
+    // console.log(yrList);
   } catch (error) {
-    console.log(error);
+    alert(response.statusText);
   }
 }
 

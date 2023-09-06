@@ -4,7 +4,7 @@ const deleteBtn = document.querySelectorAll('.delete-button');
 
 const editFormHandler = async (event) => {
   event.preventDefault(); 
-    console.log(event.target);
+    // console.log(event.target);
     const id = event.target.parentElement.getAttribute('data-form');
     const text = document.querySelector(`[data-text="${id}"]`).value.trim();
     const rating = document.querySelector(`[data-rating="${id}"]`).value;
