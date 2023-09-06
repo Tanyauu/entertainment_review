@@ -3,7 +3,7 @@
 // const TV = require('./tvshows');
 const Review = require('./review');
 const Item = require('./item');
-const User = require('./user');
+const User = require('./newuser');
 
 //movie has many reviews
 // Movie.hasMany(Review, {

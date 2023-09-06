@@ -94,9 +94,7 @@ async function fetchYear() {
       a.setAttribute("class", "hover:text-yellow-400");
       a.innerText = sortedYears[i].year;
       li.appendChild(a);
-      if (li != null) {
-        yrList.appendChild(li);
-      }
+      yrList.appendChild(li);
     }
     console.log(yrList);
   } catch (error) {
@@ -125,18 +123,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 });
 
-// document
-//   .querySelector('#button1')
-//   .addEventListener('click', movieButtonHandler);
-
-// document
-//   .querySelector('#button2')
-//   .addEventListener('click', tvButtonHandler);
-
-// document
-//   .querySelector('#button3')
-//   .addEventListener('click', gameButtonHandler);
-
-fetchYear();
-
+if (yrList) {
+  fetchYear();
+}
 
