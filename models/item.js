@@ -13,8 +13,8 @@ Item.init(
     },
     category:
     {
-      type:DataTypes.STRING,
-      allowNull:false,
+      type: DataTypes.STRING,
+      allowNull: false,
 
     },
 
@@ -29,10 +29,7 @@ Item.init(
     url: {
       type: DataTypes.TEXT('long'),
     },
-    // avgRating:{
-    //   type: DataTypes.decimal,
 
-    // },
     year: {
       type: DataTypes.INTEGER,
       allowNull: false,
