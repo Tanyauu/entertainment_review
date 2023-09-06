@@ -5,7 +5,7 @@
 <p>In our second bootcamp project our team decided to build a website for reviewing Games, Movies and TV shows.</p>
 <p>We have fleshed out our ideas on our initial brainstorming session and seetled on creating a website for reviewing entertainment media (Games, Movies and Tvshows)</p>
 
-![image](images/homepage.png)
+![Image](/images/homepage.png)
 
 ### Why is this significant?
 
