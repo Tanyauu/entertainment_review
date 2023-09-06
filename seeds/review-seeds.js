@@ -362,11 +362,296 @@ const reviewData = [
         user_id: 3,
     },
     {
-        text: "Sega Classics. Though not a rivetting experience, it was probably best for it's time",
-        item_id: 36,
+        text: "If No Hard Feelings works, though, it’s largely because of the chemistry between the duo. Chemistry is on point",
+        item_id: 37,
+        rating: 4,
+        user_id: 2,
+    },
+    {
+        text: "Operation Fortune was fantastic, I had the best time. Ignore the critics: turned out way better than rotten tomato's low reviews.",
+        item_id: 38,
         rating: 4,
         user_id: 1,
     },
+
+    {
+        text: "Back for their fourth, Statham and Ritchie clearly work well together, and helped bring to life the character. The set and costumes are just beautiful and eye poping colours. Entirely captivating",
+        item_id: 38,
+        rating: 5,
+        user_id: 3,
+    },
+
+    {
+        text: " give this “finale” 4.5 stars actually and for only 1 reason and his name is Harrison Ford.  How anyone does his own stunt at 80?",
+        item_id: 39,
+        rating: 4,
+        user_id: 1,
+    },
+
+    {
+        text: "I noticed that it wasn't directed by Spielberg and that it was different from within the franchise. I saw a different side of Indiana Jones",
+        item_id: 39,
+        rating: 5,
+        user_id: 4,
+    },
+    {
+        text: "It wastes no time with the fast cars and goes straight into the story. The chase sequences are impeccably choreographed, filled with jaw-dropping moments that will leave you on the edge of your seat. A truely immersive experience",
+        item_id: 40,
+        rating: 5,
+        user_id: 2,
+    },
+
+    {
+        text: "The first several movies are great and you can re-watch them randomly from time to time. But the further in we get the less its about the cars and what made the series great. I don't know anyone who said anything good about the movie",
+        item_id: 40,
+        rating: 4,
+        user_id: 1,
+    },
+
+    {
+        text: "Worst out of all the films to be honest. It brings the action, cars and who could forget feelings. But this seemed way too much if you ask me. ",
+        item_id: 40,
+        rating: 3,
+        user_id: 4,
+    },
+
+    {
+        text: "Unexpectedly captivating.  magical fairy tale of wonder, mythology. Totally took my breathe away",
+        item_id: 41,
+        rating: 5,
+        user_id: 1,
+    },
+
+    {
+        text: "It is indeed a fantasy fable and so much more. It was heartwarming and touchy",
+        item_id: 41,
+        rating: 4,
+        user_id: 2,
+    },
+
+    {
+        text: "I admit it was not really a masterpiece. A nonstop visual action and drama. Good run for your money.",
+        item_id: 42,
+        rating: 4,
+        user_id: 1,
+    },
+
+    {
+        text: "It was an absolute delight. Bursting with energy, heart, and a dazzling display of superhero prowess, this film delivers a fantastic cinematic experience",
+        item_id: 43,
+        rating: 4,
+        user_id: 3,
+    },
+
+    {
+        text: "It offered jaw-dropping action sequences, mind-bending time travel. I absolutely loved it",
+        item_id: 43,
+        rating: 4,
+        user_id: 1,
+    },
+
+    {
+        text: "Seeing this has brightened up my day and made me laugh a little too! How delightful. The characters, visuals are all perfect",
+        item_id: 44,
+        rating: 5,
+        user_id: 1,
+    },
+
+    {
+        text: "Emotional, visceral and as big as films get!Go see it and experience something you have never seen before especially on the big screen",
+        item_id: 45,
+        rating: 4,
+        user_id: 1,
+    },
+
+    {
+        text: "Am relieved and happy to say that Avatar The Way of Water is worth the years of wait!I can remember seeing the first film all the way back in 2009, and I was honestly blown away ",
+        item_id: 45,
+        rating: 5,
+        user_id: 3,
+    },
+
+    {
+        text: " Craft beautifully though MCU wasn't so memorable. Shang-Chi has a massive soulfulness",
+        item_id: 46,
+        rating: 4,
+        user_id: 2,
+    },
+
+    {
+        text: "It has all the hallmarks of a Marvel superhero film: a clear plot, comedy, relatable characters, and lots of CGI - but has the distinctive stamp of Hongkong action films and the martial arts fighting,",
+        item_id: 46,
+        rating: 4,
+        user_id: 1,
+    },
+    {
+        text: " All the actors and especially Simu Liu have undergone extensive martial arts training and it shows. The bus scene and the one on the bamboo in Macau reallyvstood out!",
+        item_id: 46,
+        rating: 5,
+        user_id: 1,
+    },
+
+    {
+        text: "The movie was very predictable and made it. Is just a pass for me.",
+        item_id: 47,
+        rating: 3,
+        user_id: 1,
+    },
+    {
+        text: "The reviews were quite misleading. The show was one star, acting went downhill pretty fast",
+        item_id: 47,
+        rating: 3,
+        user_id: 1,
+    },
+    {
+        text: "The story and world that gave birth to fantasy and Sci-Fi as we know it, as a main influence and many more for years to come. It was my first introduction to the sci-fi of what was imagined and now is possible",
+        item_id: 48,
+        rating: 5,
+        user_id: 1,
+    },
+    {
+        text: "As someone coming from the book to the movie, I can in good conscience add to the roar of praise for how well the film was able to capture the essence of the book without losing its way wading through ",
+        item_id: 48,
+        rating: 4,
+        user_id: 1,
+    },
+    {
+        text: "I had to shut it off in the violent scene,As a woman with domestic violence in my past.I had a very real sudden disturbed attack. I was disappointed. I hadn't seen Crowe on the screen for so long.It showed what a mess we'd all become. Please be kind to each other",
+        item_id: 49,
+        rating: 3,
+        user_id: 4,
+    },
+    {
+        text: "One of the most thought provoking movie.It was entertaining with some twists",
+        item_id: 50,
+        rating: 5,
+        user_id: 3,
+    },
+    {
+        text: " I don't know how anyone views this and doesn't experience horror. it is expertly filmed and edited. I watched it again last night ",
+        item_id: 51,
+        rating: 4,
+        user_id: 1,
+    },
+    {
+        text: "There are very few movies where if it's plot is complex, difficult to follow and understand but still we get glued in. Genuine complex with excitement",
+        item_id: 52,
+        rating: 5,
+        user_id: 2,
+    },
+
+    {
+        text: "Most amazing one-shot movie ever. ",
+        item_id: 53,
+        rating: 4,
+        user_id: 1,
+    },
+
+    {
+        text: "Tenet is certainly an extremely ambitious project even for a director, who will use any means necessary to achieve his vision. It really shows the CG and the complexity",
+        item_id: 52,
+        rating: 5,
+        user_id: 3,
+    },
+
+    {
+        text: "All are exactly on point and combine to create both a musical and visual feast. The performers offer so many standout performances. ",
+        item_id: 54,
+        rating: 5,
+        user_id: 1,
+    },
+
+    {
+        text: "Couldn't have arrived at a better moment. This show does something incredible. Through its multi-racial casting, it makes the founding of our country relatable to everybody in the country,",
+        item_id: 54,
+        rating: 5,
+        user_id: 2,
+    },
+
+    {
+        text: "Engaging and believable. I loved how the storytelling keeps twists and turns. Very enjoyable to watch",
+        item_id: 55,
+        rating: 4,
+        user_id: 3,
+    },
+
+    {
+        text: "Run has great storytelling and intense drama. Best acting...Run is not the complex mind bending psychological thriller, it was a bit on the  conventional side.",
+        item_id: 55,
+        rating: 4,
+        user_id: 4,
+    },
+
+    {
+        text: "This beautiful heartwarming, and emotive film.This film is not a biography. Story ofn how he inspired someone to get his life back on track",
+        item_id: 56,
+        rating: 4,
+        user_id: 1,
+    },
+
+    {
+        text: "Excellent independent horror films and we've had a great run this year.",
+        item_id: 57,
+        rating: 5,
+        user_id: 2,
+    },
+
+    {
+        text: "Simple stories and documentary style horror films. Very relatable and jumpscares are great! Very well paced.",
+        item_id: 57,
+        rating: 4,
+        user_id: 4,
+    },
+
+    {
+        text: "This movie might just be my favorite movie of all time. The use of the reality as material for comedy and improv. Very relatable and conveyed some great messages.",
+        item_id: 58,
+        rating: 5,
+        user_id: 1,
+    },
+    {
+        text: "Highly recommended! Cannot wait for Season 2!",
+        item_id: 59,
+        rating: 5,
+        user_id: 1,
+    },
+    {
+        text: "Easily the best debut film I've ever seen. A simple but powerful story with an immersive experience. Beautiful visuals, sounds and inteligently done. Best film by Clark",
+        item_id: 60,
+        rating: 5,
+        user_id: 1,
+    },
+    {
+        text: "I have watched many, many coming-of-age stories and I must say this is the best acting yet. ",
+        item_id: 61,
+        rating: 5,
+        user_id: 2,
+    },
+    {
+        text: "The chemistry couldn't be missed, refreshing and livel. The cinematography did great. Artistic and atmospheric.",
+        item_id: 62,
+        rating: 5,
+        user_id: 1,
+    },
+    {
+        text: "Very well thought out and had executed  details excellently.",
+        item_id: 62,
+        rating: 4,
+        user_id: 3,
+    },
+    {
+        text: "Essentially a non-stop odyssey of a man desperately trying to save himself as his personal and professional lives collapse around him.  In its rough-edged style and frenetic pacing, it’s not unlike their previous film",
+        item_id: 63,
+        rating: 3,
+        user_id: 2,
+    },
+    {
+        text: "I love it! It shows me scenery from a country I’ve never visited but would love to one day. It’s full of drama with some romance and gives an insight into the work and type of situations that Flying Doctors deal with.",
+        item_id: 64,
+        rating: 5,
+        user_id: 4,
+    },
+
 
 ];
 
